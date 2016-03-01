@@ -166,3 +166,38 @@ Blockly.Arduino.declare_var = function() {
   return code;
 };
 
+Blockly.Arduino.declare_var_uint = function() {
+  var value_name = Blockly.Arduino.valueToCode(this, 'NAME', Blockly.Arduino.ORDER_ATOMIC) || '1'
+  var value_num = Blockly.Arduino.valueToCode(this, "NUM", Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_['setup_declare_var' + value_name] = 'unsigned int ' + value_name + ' = ' + value_num + ';\n';
+  Blockly.Arduino.declares_[value_name] = '1';
+  var code = ' \n'
+  return code;
+};
+
+Blockly.Arduino.declare_var_long = function() {
+  var value_name = Blockly.Arduino.valueToCode(this, 'NAME', Blockly.Arduino.ORDER_ATOMIC) || '1'
+  var value_num = Blockly.Arduino.valueToCode(this, "NUM", Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_['setup_declare_var' + value_name] = 'long ' + value_name + ' = ' + value_num + 'L;\n';
+  Blockly.Arduino.declares_[value_name] = '1';
+  var code = ' \n'
+  return code;
+};
+
+Blockly.Arduino.declare_var_ulong = function() {
+  var value_name = Blockly.Arduino.valueToCode(this, 'NAME', Blockly.Arduino.ORDER_ATOMIC) || '1'
+  var value_num = Blockly.Arduino.valueToCode(this, "NUM", Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_['setup_declare_var' + value_name] = 'unsigned long ' + value_name + ' = ' + value_num + 'UL;\n';
+  Blockly.Arduino.declares_[value_name] = '1';
+  var code = ' \n'
+  return code;
+};
+
+Blockly.Arduino.declare_var_float = function() {
+  var value_name = Blockly.Arduino.valueToCode(this, 'NAME', Blockly.Arduino.ORDER_ATOMIC) || '1'
+  var value_num = Blockly.Arduino.valueToCode(this, "NUM", Blockly.Arduino.ORDER_ATOMIC);
+  Blockly.Arduino.definitions_['setup_declare_var' + value_name] = 'float ' + value_name + ' = ' + value_num + ';\n';
+  Blockly.Arduino.declares_[value_name] = '1';
+  var code = ' \n'
+  return code;
+};
