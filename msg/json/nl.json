@@ -357,5 +357,10 @@
 	"ARD_AS_LONG_NUMBER": "als lang geheel getal",
 	"ARD_AS_ULONG_NUMBER": "als lang positief geheel getal",
 	"ARD_AS_FLOAT_NUMBER": "als decimaal getal",
+	"ARD_AS_INTEGER_NUMBER_TIP": "Definieer een variabele als geheel getal, -32768 to 32767",
+	"ARD_AS_UINT_NUMBER_TIP": "Definieer een variabele als positief geheel getalr, 0 to 65535",
+	"ARD_AS_LONG_NUMBER_TIP": "Definieer een variabele als lang geheel getal, -2,147,483,648 to 2,147,483,647",
+	"ARD_AS_ULONG_NUMBER_TIP": "Definieer een variabele als positief lang geheel getal, 0 to 4,294,967,295",
+	"ARD_AS_FLOAT_NUMBER_TIP": "Definieer een variabele als decimaal getal, vb 3.6 of 5e4 of -3.14",
 	"ARD_DEFINE": "Definieer"
 }
