@@ -95,6 +95,7 @@ profile["default"] = profile["arduino"];
 Blockly.Arduino.init = function(workspace) {
   // Create a dictionary of definitions to be printed before setups.
   Blockly.Arduino.definitions_ = Object.create(null);
+  Blockly.Arduino.declares_ = Object.create(null);
   // Create a dictionary of setups to be printed before the code.
   Blockly.Arduino.setups_ = Object.create(null);
 
@@ -104,15 +105,9 @@ Blockly.Arduino.init = function(workspace) {
 	} else {
 		Blockly.Arduino.variableDB_.reset();
 	}
+  Blockly.Arduino.thevariables = Blockly.Variables.allVariables(workspace);
 
-	var defvars = [];
-	var variables = Blockly.Variables.allVariables(workspace);
-	for (var x = 0; x < variables.length; x++) {
-		defvars[x] = 'int ' +
-				Blockly.Arduino.variableDB_.getName(variables[x],
-				Blockly.Variables.NAME_TYPE) + ';\n';
-	}
-	Blockly.Arduino.definitions_['variables'] = defvars.join('\n');
+
 };
 
 /**
@@ -121,6 +116,17 @@ Blockly.Arduino.init = function(workspace) {
  * @return {string} Completed code.
  */
 Blockly.Arduino.finish = function(code) {
+	var defvars = [];
+	for (var x = 0; x < Blockly.Arduino.thevariables.length; x++) {
+	   if (Blockly.Arduino.declares_[Blockly.Arduino.variableDB_.getName(Blockly.Arduino.thevariables[x],
+				Blockly.Variables.NAME_TYPE)]!='1') {
+		defvars[x] = 'int ' +
+				Blockly.Arduino.variableDB_.getName(Blockly.Arduino.thevariables[x],
+				Blockly.Variables.NAME_TYPE) + ';\n';
+	   }
+	}
+	Blockly.Arduino.definitions_['variables'] = defvars.join('\n');
+	
   // Indent every line.
   code = '  ' + code.replace(/\n/g, '\n  ');
   code = code.replace(/\n\s+$/, '\n');
@@ -128,7 +134,8 @@ Blockly.Arduino.finish = function(code) {
 
   // Convert the definitions dictionary into a list.
   var imports = [];
-  var definitions = [];
+  var definitions = [Blockly.Arduino.definitions_['variables']];
+  delete Blockly.Arduino.definitions_['variables'];
   for (var name in Blockly.Arduino.definitions_) {
     var def = Blockly.Arduino.definitions_[name];
     if (def.match(/^#include/)) {

@@ -91,6 +91,23 @@ Blockly.Blocks['inout_digital_write'] = {
   }
 };
 
+Blockly.Blocks['inout_digital_write_var'] = {
+  helpUrl: 'http://arduino.cc/en/Reference/DigitalWrite',
+  init: function() {
+    this.setColour(230);
+    this.appendValueInput("PIN", 'Number')
+        .appendField("DigitalWrite PIN#")
+        .setCheck('Number');
+    this.appendValueInput("STATUS", 'Number')
+        .appendField("Status")
+        .setCheck('Number');
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Write digital value to a specific Port');
+  }
+};
+
 Blockly.Blocks['inout_digital_read'] = {
   helpUrl: 'http://arduino.cc/en/Reference/DigitalRead',
   init: function() {
@@ -223,3 +240,20 @@ Blockly.Blocks['serial_print'] = {
     this.setTooltip('Prints data to the console/serial port as human-readable ASCII text.');
   }
 };
+
+Blockly.Blocks['declare_var'] = {
+  helpUrl: 'http://arduino.cc/en/Reference/',
+  init: function() {
+    this.setColour(Blockly.Blocks.variables.HUE);
+    this.appendValueInput("NAME", 'String')
+        .appendField("Declare")
+    this.appendValueInput("NUM", "Number")
+        .appendField("as number")
+        .setCheck("Number");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip('Declare a variable');
+  }
+};
+
