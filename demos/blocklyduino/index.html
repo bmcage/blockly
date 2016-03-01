@@ -286,7 +286,7 @@ function init() {
       <td>
         <table width="100%">
           <tr id="tabRow" height="1em">
-            <td id="tab_blocks" class="tabon" onclick="tabClick('blocks')">Blocks</td>
+            <td id="tab_blocks" class="tabon" onclick="tabClick('blocks')">Blokken</td>
             <td class="tabmin">&nbsp;</td>
             <!--td id="tab_javascript" class="taboff" onclick="tabClick(this.id)">JavaScript</td>
             <td class="tabmin">&nbsp;</td-->
@@ -301,10 +301,10 @@ function init() {
               <button type="button" onclick="uploadClick()">Upload</button>
               <!--<button type="button" onclick="resetClick()">Reset</button> -->
               <button type="button" onclick="ledupClick()">LedUpStart</button>
-              <button onclick="discard()">Discard</button>
-              <button onclick="saveCode()">Save Arduino Code</button>
-              <button onclick="save()">Save XML</button>
-              <button id="fakeload">Load XML</button>
+              <button onclick="discard()">Herbeginnen</button>
+              <button onclick="saveCode()">Arduino Code Opslaan</button>
+              <button onclick="save()">XML Opslaan</button>
+              <button id="fakeload">XML Laden</button>
               <input type="file" id="load" style="display: none;"/>
               <!--button class="launch" onclick="runJS()">Run Program</button-->
             </td>
@@ -321,14 +321,14 @@ function init() {
   <textarea id="content_xml" class="content" wrap="off"></textarea>
 
   <xml id="toolbox" style="display: none">
-    <category name="Logic">
+    <category name="Logica">
       <block type="controls_if"></block>
       <block type="logic_compare"></block>
       <block type="logic_operation"></block>
       <block type="logic_negate"></block>
       <block type="logic_null"></block>
     </category>
-    <category name="Control">
+    <category name="Herhalen">
       <block type="base_delay">
         <value name="DELAY_TIME">
           <block type="math_number">
@@ -350,7 +350,7 @@ function init() {
       </block>
       <block type="controls_whileUntil"></block>
     </category>
-    <category name="Math">
+    <category name="Wiskunde">
       <block type="math_number"></block>
       <block type="math_arithmetic"></block>
       <block type="base_map">
@@ -361,13 +361,13 @@ function init() {
         </value>
       </block>
     </category>
-    <category name="Text">
+    <category name="Tekst">
       <block type="text"></block>
     </category>
-    <category name="Variables" custom="VARIABLE"></category>
-    <category name="Functions" custom="PROCEDURE"></category>
+    <category name="Variabelen" custom="VARIABLE"></category>
+    <category name="Functies" custom="PROCEDURE"></category>
     <sep></sep>
-    <category name="Define">
+    <category name="Definieer">
       <block type="declare_var"></block>
       <block type="declare_var_uint"></block>
       <block type="declare_var_long"></block>
