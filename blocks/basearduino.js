@@ -296,7 +296,7 @@ Blockly.Blocks['declare_var_uint'] = {
     this.appendValueInput("NAME", 'String')
         .appendField(Blockly.Msg.ARD_DEFINE)
     this.appendValueInput("NUM", "Number")
-        .appendField(Blockly.Msg.ARD_AS_UINT_NUMBER)
+        .appendField(Blockly.Msg.ARD_AS_UINT_NUMBER )
         .setCheck("Number");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);

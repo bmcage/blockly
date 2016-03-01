@@ -7,6 +7,17 @@ goog.provide('Blockly.Msg.ko');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ADD_COMMENT = "댓글 추가";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = "as decimal number";  // untranslated
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = "Declare a variable as a decimal number, eg 3.6 or 5e4 or -3.14";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = "as integer number";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = "Declare a variable as integer, -32768 to 32767";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER = "as long integer number";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = "Declare a variable as a long integer, -2,147,483,648 to 2,147,483,647";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER = "as positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = "Declare a variable as a positive integer, 0 to 65535";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER = "as long positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = "Declare a variable as a long positive integer, 0 to 4,294,967,295";  // untranslated
+Blockly.Msg.ARD_DEFINE = "Define";  // untranslated
 Blockly.Msg.AUTH = "당신의 작업을 저장하고 다른 사람과 공유할 수 있도록 이 애플리케이션을 인증해 주십시오.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "값 바꾸기:";
 Blockly.Msg.CHAT = "이 상자에 입력하여 당신의 동료와 채팅하세요!";

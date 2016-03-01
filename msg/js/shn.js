@@ -7,6 +7,17 @@ goog.provide('Blockly.Msg.shn');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ADD_COMMENT = "သႂ်ႇၶေႃႈၵႂၢမ်း";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = "as decimal number";  // untranslated
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = "Declare a variable as a decimal number, eg 3.6 or 5e4 or -3.14";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = "as integer number";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = "Declare a variable as integer, -32768 to 32767";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER = "as long integer number";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = "Declare a variable as a long integer, -2,147,483,648 to 2,147,483,647";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER = "as positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = "Declare a variable as a positive integer, 0 to 65535";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER = "as long positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = "Declare a variable as a long positive integer, 0 to 4,294,967,295";  // untranslated
+Blockly.Msg.ARD_DEFINE = "Define";  // untranslated
 Blockly.Msg.AUTH = "ၶွပ်ႈၸႂ် ပၼ်ၶႂၢင်ႉႁပ်ႉဢဝ် ဢႅပ်ႉၼႆႉ တီႈၼႂ်းၵၢၼ်ၸဝ်ႈၵဝ်ႇသေယဝ်ႉ ၸဝ်ႈၵဝ်ႇ ႁႂ်ႈလႆႈသိမ်း ႁႂ်ႈလႆႈပိုၼ်ပၼ်သေၵမ်း";
 Blockly.Msg.CHANGE_VALUE_TITLE = "လႅၵ်ႈလၢႆႈၼမ်ႉၵတ်ႉ";
 Blockly.Msg.CHAT = "​ပေႃႉလိၵ်ႈ ၼႂ်းလွၵ်းၼႆႉသေ ၶျၢတ်ႉၸူး ၵေႃႉႁူမ်ႈႁဵတ်းႁူမ်ႈသၢင်ႈ ၸဝ်ႈၵဝ်ႇ";

@@ -7,6 +7,17 @@ goog.provide('Blockly.Msg.es');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ADD_COMMENT = "Añadir comentario";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = "as decimal number";  // untranslated
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = "Declare a variable as a decimal number, eg 3.6 or 5e4 or -3.14";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = "as integer number";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = "Declare a variable as integer, -32768 to 32767";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER = "as long integer number";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = "Declare a variable as a long integer, -2,147,483,648 to 2,147,483,647";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER = "as positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = "Declare a variable as a positive integer, 0 to 65535";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER = "as long positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = "Declare a variable as a long positive integer, 0 to 4,294,967,295";  // untranslated
+Blockly.Msg.ARD_DEFINE = "Define";  // untranslated
 Blockly.Msg.AUTH = "Autoriza a esta aplicación para guardar tu trabajo y permitir que lo compartas.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Cambiar el valor:";
 Blockly.Msg.CHAT = "¡Chatea con tu colaborador escribiendo en este cuadro!";

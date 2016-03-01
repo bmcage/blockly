@@ -7,10 +7,21 @@ goog.provide('Blockly.Msg.br');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ADD_COMMENT = "Ouzhpennañ un evezhiadenn";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = "as decimal number";  // untranslated
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = "Declare a variable as a decimal number, eg 3.6 or 5e4 or -3.14";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = "as integer number";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = "Declare a variable as integer, -32768 to 32767";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER = "as long integer number";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = "Declare a variable as a long integer, -2,147,483,648 to 2,147,483,647";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER = "as positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = "Declare a variable as a positive integer, 0 to 65535";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER = "as long positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = "Declare a variable as a long positive integer, 0 to 4,294,967,295";  // untranslated
+Blockly.Msg.ARD_DEFINE = "Define";  // untranslated
 Blockly.Msg.AUTH = "Roit aotre, mar plij, d'an arload-mañ evit gallout saveteiñ ho labour ha reiñ aotre dezhañ da rannañ ho labour ganimp.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Kemmañ an dalvoudenn :";
 Blockly.Msg.CHAT = "Flapañ gant ho kenlabourer en ur skrivañ er voest-se !";
-Blockly.Msg.CLEAN_UP = "Clean up Blocks";  // untranslated
+Blockly.Msg.CLEAN_UP = "Naetaat ar bloc'hoù";
 Blockly.Msg.COLLAPSE_ALL = "Bihanaat ar bloc'hoù";
 Blockly.Msg.COLLAPSE_BLOCK = "Bihanaat ar bloc'h";
 Blockly.Msg.COLOUR_BLEND_COLOUR1 = "liv 1";
@@ -271,7 +282,7 @@ Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL = "https://en.wikipedia.org/wiki/Proce
 Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP = "Seveniñ an arc'hwel '%1' termenet gant an implijer hag implijout e zisoc'h.";
 Blockly.Msg.PROCEDURES_CALL_BEFORE_PARAMS = "gant :";
 Blockly.Msg.PROCEDURES_CREATE_DO = "Krouiñ '%1'";
-Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = "Describe this function...";  // untranslated
+Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = "Deskrivañ an arc'hwel-mañ...";
 Blockly.Msg.PROCEDURES_DEFNORETURN_DO = "";  // untranslated
 Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL = "https://en.wikipedia.org/wiki/Procedure_%28computer_science%29";  // untranslated
 Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "ober un dra bennak";

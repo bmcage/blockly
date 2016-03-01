@@ -7,6 +7,17 @@ goog.provide('Blockly.Msg.sl');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ADD_COMMENT = "Dodaj komentar";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = "as decimal number";  // untranslated
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = "Declare a variable as a decimal number, eg 3.6 or 5e4 or -3.14";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = "as integer number";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = "Declare a variable as integer, -32768 to 32767";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER = "as long integer number";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = "Declare a variable as a long integer, -2,147,483,648 to 2,147,483,647";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER = "as positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = "Declare a variable as a positive integer, 0 to 65535";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER = "as long positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = "Declare a variable as a long positive integer, 0 to 4,294,967,295";  // untranslated
+Blockly.Msg.ARD_DEFINE = "Define";  // untranslated
 Blockly.Msg.AUTH = "Prosimo, avtoriziraj to aplikacijo, da boš lahko svoje delo shranil(-a) in delil(-a) z drugimi.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Spremeni vrednost:";
 Blockly.Msg.CHAT = "Klepetaj s sodelavcem tako, da tipkaš v to okno!";
@@ -271,7 +282,7 @@ Blockly.Msg.PROCEDURES_CALLRETURN_HELPURL = "https://en.wikipedia.org/wiki/Subro
 Blockly.Msg.PROCEDURES_CALLRETURN_TOOLTIP = "Izvede uporabniško funkcijo '%1' in uporabi njen izhod.";
 Blockly.Msg.PROCEDURES_CALL_BEFORE_PARAMS = "s/z:";
 Blockly.Msg.PROCEDURES_CREATE_DO = "Ustvari '%1'";
-Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = "Describe this function...";  // untranslated
+Blockly.Msg.PROCEDURES_DEFNORETURN_COMMENT = "Opišite funkcijo ...";
 Blockly.Msg.PROCEDURES_DEFNORETURN_DO = "";  // untranslated
 Blockly.Msg.PROCEDURES_DEFNORETURN_HELPURL = "https://en.wikipedia.org/wiki/Procedure_%28computer_science%29";  // untranslated
 Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE = "nekaj";

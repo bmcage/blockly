@@ -7,6 +7,17 @@ goog.provide('Blockly.Msg.en');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ADD_COMMENT = "Add Comment";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = "as decimal number";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = "Declare a variable as a decimal number, eg 3.6 or 5e4 or -3.14";
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = "as integer number";
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = "Declare a variable as integer, -32768 to 32767";
+Blockly.Msg.ARD_AS_LONG_NUMBER = "as long integer number";
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = "Declare a variable as a long integer, -2,147,483,648 to 2,147,483,647";
+Blockly.Msg.ARD_AS_UINT_NUMBER = "as positive integer number";
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = "Declare a variable as a positive integer, 0 to 65535";
+Blockly.Msg.ARD_AS_ULONG_NUMBER = "as long positive integer number";
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = "Declare a variable as a long positive integer, 0 to 4,294,967,295";
+Blockly.Msg.ARD_DEFINE = "Define";
 Blockly.Msg.AUTH = "Please authorize this app to enable your work to be saved and to allow it to be shared by you.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Change value:";
 Blockly.Msg.CHAT = "Chat with your collaborator by typing in this box!";

@@ -7,6 +7,17 @@ goog.provide('Blockly.Msg.ta');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ADD_COMMENT = "கருத்தை சேர்";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = "as decimal number";  // untranslated
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = "Declare a variable as a decimal number, eg 3.6 or 5e4 or -3.14";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = "as integer number";  // untranslated
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = "Declare a variable as integer, -32768 to 32767";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER = "as long integer number";  // untranslated
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = "Declare a variable as a long integer, -2,147,483,648 to 2,147,483,647";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER = "as positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = "Declare a variable as a positive integer, 0 to 65535";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER = "as long positive integer number";  // untranslated
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = "Declare a variable as a long positive integer, 0 to 4,294,967,295";  // untranslated
+Blockly.Msg.ARD_DEFINE = "Define";  // untranslated
 Blockly.Msg.AUTH = "தயவுச்செய்து இச்செயலியை அங்கீகரித்து உங்கள் வேலையைச் சேமித்து பகிரரும்படி அனுமதிக்கவும்.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "மதிப்பை மாற்றவும்:";
 Blockly.Msg.CHAT = "இந்தப் பெட்டியில் தட்டச்சு செய்வதன் மூலம் கூட்டுப்பணியாளருடன் உரையாடலாம்!";

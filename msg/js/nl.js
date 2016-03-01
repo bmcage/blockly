@@ -7,6 +7,17 @@ goog.provide('Blockly.Msg.nl');
 goog.require('Blockly.Msg');
 
 Blockly.Msg.ADD_COMMENT = "Reactie toevoegen";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER = "als decimaal getal";
+Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP = "Definieer een variabele als decimaal getal, vb 3.6 of 5e4 of -3.14";
+Blockly.Msg.ARD_AS_INTEGER_NUMBER = "als geheel getal";
+Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP = "Definieer een variabele als geheel getal, -32768 to 32767";
+Blockly.Msg.ARD_AS_LONG_NUMBER = "als lang geheel getal";
+Blockly.Msg.ARD_AS_LONG_NUMBER_TIP = "Definieer een variabele als lang geheel getal, -2,147,483,648 to 2,147,483,647";
+Blockly.Msg.ARD_AS_UINT_NUMBER = "als positief geheel getal";
+Blockly.Msg.ARD_AS_UINT_NUMBER_TIP = "Definieer een variabele als positief geheel getalr, 0 to 65535";
+Blockly.Msg.ARD_AS_ULONG_NUMBER = "als lang positief geheel getal";
+Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP = "Definieer een variabele als positief lang geheel getal, 0 to 4,294,967,295";
+Blockly.Msg.ARD_DEFINE = "Definieer";
 Blockly.Msg.AUTH = "Sta deze app toe om uw werk op te slaan het uw werk te delen.";
 Blockly.Msg.CHANGE_VALUE_TITLE = "Waarde wijzigen:";
 Blockly.Msg.CHAT = "Chat met iemand die ook aan het werk is via dit venster!";

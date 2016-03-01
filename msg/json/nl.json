@@ -351,5 +351,11 @@
 	"PROCEDURES_CREATE_DO": "Maak \"%1\"",
 	"PROCEDURES_IFRETURN_TOOLTIP": "Als de eerste waarde \"waar\" is, geef dan de tweede waarde terug.",
 	"PROCEDURES_IFRETURN_HELPURL": "http://c2.com/cgi/wiki?GuardClause",
-	"PROCEDURES_IFRETURN_WARNING": "Waarschuwing: dit blok mag alleen gebruikt worden binnen de definitie van een functie."
+	"PROCEDURES_IFRETURN_WARNING": "Waarschuwing: dit blok mag alleen gebruikt worden binnen de definitie van een functie.",
+	"ARD_AS_INTEGER_NUMBER": "als geheel getal",
+	"ARD_AS_UINT_NUMBER": "als positief geheel getal",
+	"ARD_AS_LONG_NUMBER": "als lang geheel getal",
+	"ARD_AS_ULONG_NUMBER": "als lang positief geheel getal",
+	"ARD_AS_FLOAT_NUMBER": "als decimaal getal",
+	"ARD_DEFINE": "Definieer"
 }
