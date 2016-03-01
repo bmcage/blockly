@@ -242,18 +242,81 @@ Blockly.Blocks['serial_print'] = {
 };
 
 Blockly.Blocks['declare_var'] = {
-  helpUrl: 'http://arduino.cc/en/Reference/',
+  helpUrl: 'https://www.arduino.cc/en/Reference/Int',
   init: function() {
     this.setColour(Blockly.Blocks.variables.HUE);
     this.appendValueInput("NAME", 'String')
-        .appendField("Declare")
+        .appendField(Blockly.Msg.ARD_DEFINE)
     this.appendValueInput("NUM", "Number")
-        .appendField("as number")
+        .appendField(Blockly.Msg.ARD_AS_INTEGER_NUMBER)
         .setCheck("Number");
     this.setInputsInline(true);
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setTooltip('Declare a variable');
+    this.setTooltip(Blockly.Msg.ARD_AS_INTEGER_NUMBER_TIP);
   }
 };
 
+Blockly.Blocks['declare_var_float'] = {
+  helpUrl: 'https://www.arduino.cc/en/Reference/Float',
+  init: function() {
+    this.setColour(Blockly.Blocks.variables.HUE);
+    this.appendValueInput("NAME", 'String')
+        .appendField(Blockly.Msg.ARD_DEFINE)
+    this.appendValueInput("NUM", "Number")
+        .appendField(Blockly.Msg.ARD_AS_FLOAT_NUMBER)
+        .setCheck("Number");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARD_AS_FLOAT_NUMBER_TIP);
+  }
+};
+
+Blockly.Blocks['declare_var_long'] = {
+  helpUrl: 'https://www.arduino.cc/en/Reference/Long',
+  init: function() {
+    this.setColour(Blockly.Blocks.variables.HUE);
+    this.appendValueInput("NAME", 'String')
+        .appendField(Blockly.Msg.ARD_DEFINE)
+    this.appendValueInput("NUM", "Number")
+        .appendField(Blockly.Msg.ARD_AS_LONG_NUMBER)
+        .setCheck("Number");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARD_AS_LONG_NUMBER_TIP);
+  }
+};
+
+Blockly.Blocks['declare_var_uint'] = {
+  helpUrl: 'https://www.arduino.cc/en/Reference/UnsignedInt',
+  init: function() {
+    this.setColour(Blockly.Blocks.variables.HUE);
+    this.appendValueInput("NAME", 'String')
+        .appendField(Blockly.Msg.ARD_DEFINE)
+    this.appendValueInput("NUM", "Number")
+        .appendField(Blockly.Msg.ARD_AS_UINT_NUMBER)
+        .setCheck("Number");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARD_AS_UINT_NUMBER_TIP);
+  }
+};
+
+Blockly.Blocks['declare_var_ulong'] = {
+  helpUrl: 'https://www.arduino.cc/en/Reference/UnsignedLong',
+  init: function() {
+    this.setColour(Blockly.Blocks.variables.HUE);
+    this.appendValueInput("NAME", 'String')
+        .appendField(Blockly.Msg.ARD_DEFINE)
+    this.appendValueInput("NUM", "Number")
+        .appendField(Blockly.Msg.ARD_AS_ULONG_NUMBER)
+        .setCheck("Number");
+    this.setInputsInline(true);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setTooltip(Blockly.Msg.ARD_AS_ULONG_NUMBER_TIP);
+  }
+};
