@@ -280,7 +280,6 @@ function resetClick() {
 
 function ledupClick(){
     var ledupxml =  ` <xml xmlns="http://www.w3.org/1999/xhtml">
-  
   <block type="declare_var" id="T~lR8h6YU8c5Nr*IH7g2" x="38" y="13">
     <value name="NAME">
       <block type="variables_get" id="aXP{jY^ZUfBlxZ,;^BVa">
@@ -409,18 +408,43 @@ function ledupClick(){
                                                   </block>
                                                 </value>
                                                 <next>
-                                                  <block type="procedures_callnoreturn" id="95">
-                                                    <mutation name="EffectFlikker"></mutation>
+                                                  <block type="variables_set" id="6E@HSjbT.!=N84Ms0|,Q">
+                                                    <field name="VAR">DraaiAantal</field>
+                                                    <value name="VALUE">
+                                                      <block type="math_number" id=".F{E:va!D2R2(.sH:%5J">
+                                                        <field name="NUM">20</field>
+                                                      </block>
+                                                    </value>
                                                     <next>
-                                                      <block type="procedures_callnoreturn" id="96">
-                                                        <mutation name="EffectUit"></mutation>
+                                                      <block type="variables_set" id="pj0tdA04obuxRQcd7Rtp">
+                                                        <field name="VAR">DraaiSnelheid</field>
+                                                        <value name="VALUE">
+                                                          <block type="math_number" id="+d(vc=?VG==?ihn+q(Np">
+                                                            <field name="NUM">50</field>
+                                                          </block>
+                                                        </value>
                                                         <next>
-                                                          <block type="base_delay" id="97">
-                                                            <value name="DELAY_TIME">
-                                                              <block type="math_number" id="98">
-                                                                <field name="NUM">2000</field>
+                                                          <block type="procedures_callnoreturn" id="95">
+                                                            <mutation name="EffectFlikker"></mutation>
+                                                            <next>
+                                                              <block type="procedures_callnoreturn" id="+8hH0r/Tt;{6zT/Gi,Zw">
+                                                                <mutation name="EffectDraaien"></mutation>
+                                                                <next>
+                                                                  <block type="procedures_callnoreturn" id="96">
+                                                                    <mutation name="EffectUit"></mutation>
+                                                                    <next>
+                                                                      <block type="base_delay" id="97">
+                                                                        <value name="DELAY_TIME">
+                                                                          <block type="math_number" id="98">
+                                                                            <field name="NUM">2000</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
                                                               </block>
-                                                            </value>
+                                                            </next>
                                                           </block>
                                                         </next>
                                                       </block>
@@ -626,7 +650,7 @@ function ledupClick(){
       </block>
     </statement>
   </block>
-  <block type="procedures_defnoreturn" id="64" x="13" y="563">
+  <block type="procedures_defnoreturn" id="64" x="438" y="562">
     <field name="NAME">EffectFlikker</field>
     <comment pinned="false" h="80" w="160">Describe this function...</comment>
     <statement name="STACK">
@@ -678,7 +702,244 @@ function ledupClick(){
       </block>
     </statement>
   </block>
-  </xml>`
+  <block type="procedures_defnoreturn" id="b(aF?}a[z3Q0V[Vf3(c" x="438" y="813">
+    <field name="NAME">EffectDraaien</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="controls_for" id="sJ:]DTr(nS^BAz*2LEC6">
+        <field name="VAR">i</field>
+        <value name="FROM">
+          <block type="math_number" id="-vgwjHr;M!Brurnn?8_J">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <value name="TO">
+          <block type="variables_get" id="T_z4Jk40uYMND~6H[.0t">
+            <field name="VAR">DraaiAantal</field>
+          </block>
+        </value>
+        <value name="BY">
+          <block type="math_number" id="})8C)c1P;0~!2zhES}4K">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="procedures_callnoreturn" id="}C/n/23M%MvyLDWN=5^N">
+            <mutation name="EffectUit"></mutation>
+            <next>
+              <block type="inout_digital_write_var" id="xn_FEUzcgwQh(P}2YM^Y">
+                <value name="PIN">
+                  <block type="variables_get" id="lFj#AUGsU_T3}b/ciG8^">
+                    <field name="VAR">LED0</field>
+                  </block>
+                </value>
+                <value name="STATUS">
+                  <block type="variables_get" id="QRShpe)%UJ_*@/+6t{r4">
+                    <field name="VAR">AAN</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="base_delay" id="EpLgxk6+%2}S,s:j@,S8">
+                    <value name="DELAY_TIME">
+                      <block type="variables_get" id=":OizJLiiu0l]|jKit?p(">
+                        <field name="VAR">DraaiSnelheid</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="inout_digital_write_var" id="qV?L0VP#lEbet[zIQ#*1">
+                        <value name="PIN">
+                          <block type="variables_get" id="1G:64ktl}aKtwpdVh3Oa">
+                            <field name="VAR">LED0</field>
+                          </block>
+                        </value>
+                        <value name="STATUS">
+                          <block type="variables_get" id="CEtWd:IoL2FpO]O[hUUB">
+                            <field name="VAR">UIT</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="inout_digital_write_var" id="V|KtUVkqS%Pa.yfGMXRS">
+                            <value name="PIN">
+                              <block type="variables_get" id="^1_Bp3_8i!-ul50/y-0">
+                                <field name="VAR">LED1</field>
+                              </block>
+                            </value>
+                            <value name="STATUS">
+                              <block type="variables_get" id="!+?zn:%ASc_6tSG{[rSw">
+                                <field name="VAR">AAN</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="base_delay" id="]d4/v^##whqW]e1X_Rni">
+                                <value name="DELAY_TIME">
+                                  <block type="variables_get" id="2q8=Z/UdpH*H~#wiAzzy">
+                                    <field name="VAR">DraaiSnelheid</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="inout_digital_write_var" id="QtqRi)en:I#Ix#n)g*iU">
+                                    <value name="PIN">
+                                      <block type="variables_get" id="_!))PT+A-#~AEEPJ!I06">
+                                        <field name="VAR">LED1</field>
+                                      </block>
+                                    </value>
+                                    <value name="STATUS">
+                                      <block type="variables_get" id="BmZU=(*;SI;w~n[,P;OD">
+                                        <field name="VAR">UIT</field>
+                                      </block>
+                                    </value>
+                                    <next>
+                                      <block type="inout_digital_write_var" id="_.(;RE7w#PnU%(I44yZR">
+                                        <value name="PIN">
+                                          <block type="variables_get" id="z:2EB.#M-G7mut:qpn~M">
+                                            <field name="VAR">LED2</field>
+                                          </block>
+                                        </value>
+                                        <value name="STATUS">
+                                          <block type="variables_get" id="f+DdrKe{uF*mDC9VBP)F">
+                                            <field name="VAR">AAN</field>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="base_delay" id="]%8wnnB[P2Fs!4svO;uS">
+                                            <value name="DELAY_TIME">
+                                              <block type="variables_get" id="qaTw^Ss{-T[9b!{feist">
+                                                <field name="VAR">DraaiSnelheid</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="inout_digital_write_var" id="MYw.tLf=Y~8V|C!52Co">
+                                                <value name="PIN">
+                                                  <block type="variables_get" id="x]RjnSF6@t{wsUPvxl+-">
+                                                    <field name="VAR">LED2</field>
+                                                  </block>
+                                                </value>
+                                                <value name="STATUS">
+                                                  <block type="variables_get" id="NyaYD(.4]6x*XFV=odPn">
+                                                    <field name="VAR">UIT</field>
+                                                  </block>
+                                                </value>
+                                                <next>
+                                                  <block type="inout_digital_write_var" id="|3jcBl;68Kumk45s8Q~;">
+                                                    <value name="PIN">
+                                                      <block type="variables_get" id="6M+i#qM8MC;Y(%?qYvRG">
+                                                        <field name="VAR">LED3</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="STATUS">
+                                                      <block type="variables_get" id="O]X,!kERwm.5t!s7wo@4">
+                                                        <field name="VAR">AAN</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="base_delay" id="zmjCu:OC[P58EfzPGe(s">
+                                                        <value name="DELAY_TIME">
+                                                          <block type="variables_get" id="BQYFI-WZ,lU;|FD^_{U">
+                                                            <field name="VAR">DraaiSnelheid</field>
+                                                          </block>
+                                                        </value>
+                                                        <next>
+                                                          <block type="inout_digital_write_var" id="QO]dAv;q-/T7*(3;=?[">
+                                                            <value name="PIN">
+                                                              <block type="variables_get" id="VwFTl3{b;_~n@h^A;Zb)">
+                                                                <field name="VAR">LED3</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="STATUS">
+                                                              <block type="variables_get" id="SeDswo:@.[F+Yk:6W{3s">
+                                                                <field name="VAR">UIT</field>
+                                                              </block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="inout_digital_write_var" id="|#2)hZ~aKf9W12^Ewm*l">
+                                                                <value name="PIN">
+                                                                  <block type="variables_get" id="6#:~(r%h!=yI-)O^:~ef">
+                                                                    <field name="VAR">LED4</field>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="STATUS">
+                                                                  <block type="variables_get" id="DOiSHdW]y/F+ooU]}}~V">
+                                                                    <field name="VAR">AAN</field>
+                                                                  </block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="base_delay" id="{cTc4R5V4.4IzV1Fjp4h">
+                                                                    <value name="DELAY_TIME">
+                                                                      <block type="variables_get" id="TV_[RZs,O/N%XQn.19Yf">
+                                                                        <field name="VAR">DraaiSnelheid</field>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="inout_digital_write_var" id="vHX~tq}Lm1FrJGg8qa_@">
+                                                                        <value name="PIN">
+                                                                          <block type="variables_get" id="CpM%t8BRN2n*TF#||Eh*">
+                                                                            <field name="VAR">LED4</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="STATUS">
+                                                                          <block type="variables_get" id="+ABDU#7Y!A^^zSS2;M%l">
+                                                                            <field name="VAR">UIT</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="inout_digital_write_var" id="}fyc]X{p%OEY:vi*ZDdb">
+                                                                            <value name="PIN">
+                                                                              <block type="variables_get" id="T=X)lUi[],yV,8T@K-c">
+                                                                                <field name="VAR">LED5</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="STATUS">
+                                                                              <block type="variables_get" id="2ja7[U?:koJ;uYe)LPeu">
+                                                                                <field name="VAR">AAN</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="base_delay" id="Y3[8Y::Jsy)ApUt*+,p(">
+                                                                                <value name="DELAY_TIME">
+                                                                                  <block type="variables_get" id=",582)-gZ%dTnW6?V?VA">
+                                                                                    <field name="VAR">DraaiSnelheid</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+  </block>
+</xml>`
   
     try {
         var xml = Blockly.Xml.textToDom(ledupxml);
