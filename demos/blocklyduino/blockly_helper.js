@@ -35,7 +35,7 @@ function restore_blocks() {
 * Save Arduino generated code to local file.
 */
 function saveCode() {
-  var fileName = window.prompt('What would you like to name your file?', 'BlocklyDuino')
+  var fileName = window.prompt(Blockly.Msg.WHAT_NAME_FOR_FILE, 'Blockly4Arduino')
   //doesn't save if the user quits the save prompt
   if(fileName){
     var blob = new Blob([Blockly.Arduino.workspaceToCode()], {type: 'text/plain;charset=utf-8'});
@@ -50,7 +50,7 @@ function saveCode() {
 function save() {
   var xml = Blockly.Xml.workspaceToDom(Blockly.mainWorkspace);
   var data = Blockly.Xml.domToText(xml);
-  var fileName = window.prompt('What would you like to name your file?', 'BlocklyDuino');
+  var fileName = window.prompt(Blockly.Msg.WHAT_NAME_FOR_FILE, 'Blockly4Arduino');
   // Store data in blob.
   // var builder = new BlobBuilder();
   // builder.append(data);
@@ -84,7 +84,7 @@ function load(event) {
         return;
       }
       var count = Blockly.mainWorkspace.getAllBlocks().length;
-      if (count && confirm('Replace existing blocks?\n"Cancel" will merge.')) {
+      if (count && confirm(Blockly.Msg.REPLACE_EXISTING_BLOCKS)) {
         Blockly.mainWorkspace.clear();
       }
       Blockly.Xml.domToWorkspace(Blockly.mainWorkspace, xml);
@@ -101,7 +101,7 @@ function load(event) {
  */
 function discard() {
   var count = Blockly.mainWorkspace.getAllBlocks().length;
-  if (count < 2 || window.confirm('Delete all ' + count + ' blocks?')) {
+  if (count < 2 || window.confirm(Blockly.Msg.DELETE_ALL_BLOCKS.replace('%1', count))) {
     Blockly.mainWorkspace.clear();
     renderContent();
   }
@@ -248,13 +248,11 @@ function uploadCode(code, callback) {
 }
 
 function uploadClick() {
-    alert(
-`To Upload your code to Arduino:
-  1. click on the Arduino tab
-  2. select all the code, and copy (CTRL+A and CTRL+C)
-  3. In the Arduino IDE or in a http://codebender.cc sketch, paste the code (CTRL+V)
-  4. Upload to your connected Arduino
-    `);
+    alert(Blockly.Msg.UPLOAD_CLICK_1 + "\n" + 
+          Blockly.Msg.UPLOAD_CLICK_2 + "\n" + 
+	  Blockly.Msg.UPLOAD_CLICK_3 + "\n" + 
+	  Blockly.Msg.UPLOAD_CLICK_4 + "\n" + 
+	  Blockly.Msg.UPLOAD_CLICK_5 );
     /*
     var code = document.getElementById('content_arduino').value;
 

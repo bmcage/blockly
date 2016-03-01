@@ -34,6 +34,11 @@ Blockly.Arduino.base_delay = function() {
   return code;
 };
 
+Blockly.Arduino.base_millis = function() {
+  var code = 'millis()';
+  return [code, Blockly.Arduino.ORDER_ATOMIC];
+};
+
 Blockly.Arduino.base_map = function() {
   var value_num = Blockly.Arduino.valueToCode(this, 'NUM', Blockly.Arduino.ORDER_NONE);
   var value_dmax = Blockly.Arduino.valueToCode(this, 'DMAX', Blockly.Arduino.ORDER_ATOMIC);
