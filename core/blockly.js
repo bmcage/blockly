@@ -50,6 +50,8 @@ goog.require('Blockly.utils');
 goog.require('goog.color');
 goog.require('goog.userAgent');
 
+//ardublockly added require
+goog.require('Blockly.StaticTyping');
 
 // Turn off debugging when compiled.
 var CLOSURE_DEFINES = {'goog.DEBUG': false};

@@ -48,11 +48,9 @@ Blockly.StaticTyping.prototype.collectVarsWithTypes = function(workspace) {
       var variableType = blockVarAndTypes[j][1];
       // If the type comes from a variable, so it's not directly defined, it
       // returns an Array<String(block type), String(source variable name)>
-      // returns an Object 
-      console.log(blockVarAndTypes[j]);
+      // returns an Object in current blockly ??
+      //console.log(blockVarAndTypes[j]);
       if (goog.isArray(variableType)) {
-	console.log(variableType);
-	console.isObject(variableType);
         if (this.varTypeDict[variableType[1]]) {
           variableType = this.varTypeDict[variableType[1]];
         } else {
