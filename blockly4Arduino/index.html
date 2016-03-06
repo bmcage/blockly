@@ -1,12 +1,53 @@
 <html manifest=node.manifest>
 <head>
   <meta charset="utf-8">
-  <title>Blockly for Arduino and Genuino</title>
-  <script type="text/javascript" src="../../blockly_compressed.js"></script>
-  <script type="text/javascript" src="../../blocks_compressed.js"></script>
-  <script type="text/javascript" src="../../arduino_compressed.js"></script>
+  <title>Blockly4Arduino: Blockly for Arduino and Genuino</title>
+    
+  <!-- Blockly4Arduino - These three files contain the compress version -->
+  <!--
+  <script src="../blockly_compressed.js"></script>
+  <script src="../blocks_compressed.js"></script>
+  <script src="../arduino_compressed.js"></script-->
+  <!-- To use the uncompressed version comment out the above and comment in the ones below -->
+  <script src="../blockly_uncompressed.js"></script>
+  <script src="../blocks/logic.js"></script>
+  <script src="../blocks/loops.js"></script>
+  <script src="../blocks/math.js"></script>
+  <script src="../blocks/text.js"></script>
+  <script src="../blocks/lists.js"></script>
+  <script src="../blocks/colour.js"></script>
+  <script src="../blocks/variables.js"></script>
+  <script src="../blocks/procedures.js"></script>
+  <script src="../blocks/arduino/declare.js"></script>
+  <script src="../blocks/arduino/io.js"></script>
+  <script src="../blocks/arduino/map.js"></script>
+  <script src="../blocks/arduino/procedures.js"></script>
+  <script src="../blocks/arduino/serial.js"></script>
+  <script src="../blocks/arduino/servo.js"></script>
+  <script src="../blocks/arduino/spi.js"></script>
+  <script src="../blocks/arduino/stepper.js"></script>
+  <script src="../blocks/arduino/time.js"></script>
+  <script src="../blocks/arduino/variables.js"></script>
+  <script src="../generators/arduino.js"></script>
+  <script src="../generators/arduino/boards.js"></script>
+  <script src="../generators/arduino/declare.js"></script>
+  <script src="../generators/arduino/io.js"></script>
+  <script src="../generators/arduino/lists.js"></script>
+  <script src="../generators/arduino/logic.js"></script>
+  <script src="../generators/arduino/loops.js"></script>
+  <script src="../generators/arduino/map.js"></script>
+  <script src="../generators/arduino/math.js"></script>
+  <script src="../generators/arduino/procedures.js"></script>
+  <script src="../generators/arduino/serial.js"></script>
+  <script src="../generators/arduino/servo.js"></script>
+  <script src="../generators/arduino/spi.js"></script>
+  <script src="../generators/arduino/stepper.js"></script>
+  <script src="../generators/arduino/text.js"></script>
+  <script src="../generators/arduino/time.js"></script>
+  <script src="../generators/arduino/variables.js"></script>
+
   <!-- Language of the interface -->
-  <script type="text/javascript" src="../../msg/js/nl.js"></script>
+  <script type="text/javascript" src="../msg/js/nl.js"></script>
   <script type="text/javascript" src="Blob.js"></script>
   <script type="text/javascript" src="spin.js"></script>
   <script type="text/javascript" src="FileSaver.min.js"></script>
@@ -162,7 +203,7 @@ function init() {
            length: 3,
            colour: '#ccc',
            snap: true},
-       media: '../../media/',
+       media: '../media/',
        toolbox: toolbox});
 
   auto_save_and_restore_blocks();
@@ -279,7 +320,11 @@ function init() {
   <table height="100%" width="100%">
     <tr>
       <td>
-        <h1><a href="https://developers.google.com/blockly/">Blockly for Arduino</a> &gt; web-gebaseerd visueel programmeren voor Arduino - Gebracht door <a href="http://ingegno.be">Ingegno</a></h1>
+                    <div class="header" style="width:100%;background-color:#f9f9f9;">
+                        <!--Start Logo-->
+                        <div class="logo"> <a href="http://ingegno.be"><img src="http://ingegno.be/wp-content/themes/ingegno/images/logo.jpg" alt="Ingegno" width="800px" /></a></div>
+                        <!--End Logo-->
+                    </div>
       </td>
     </tr>
     <tr>
@@ -316,142 +361,226 @@ function init() {
       <td height="99%" id="content_area"></td>
     </tr>
   </table>
+  <div id="bottom_link" style="position:absolute;bottom:8px;left:8px;font-size:8px;height:16px;z-index:1;width:250px;"><a href="https://github.com/ingegno/Blockly4Arduino/blob/master/README.md">Info</a> | <a href="index_en.html">English</a></div>
   <div id="content_blocks" class="content"></div>
   <textarea id="content_arduino" class="content" readonly wrap="off"></textarea>
   <textarea id="content_xml" class="content" wrap="off"></textarea>
 
   <xml id="toolbox" style="display: none">
-    <category name="Logica">
-      <block type="controls_if"></block>
-      <block type="logic_compare"></block>
-      <block type="logic_operation"></block>
-      <block type="logic_negate"></block>
-      <block type="logic_null"></block>
-    </category>
-    <category name="Herhalen">
-      <block type="base_delay">
-        <value name="DELAY_TIME">
-          <block type="math_number">
-            <field name="NUM">1000</field>
-          </block>
-        </value>
-      </block>
-      <block type="base_millis"></block>
-      <block type="controls_for">
-        <value name="FROM">
-          <block type="math_number">
-            <field name="NUM">1</field>
-          </block>
-        </value>
-        <value name="TO">
-          <block type="math_number">
-            <field name="NUM">10</field>
-          </block>
-        </value>
-      </block>
-      <block type="controls_whileUntil"></block>
-    </category>
-    <category name="Wiskunde">
-      <block type="math_number"></block>
-      <block type="math_arithmetic"></block>
-      <block type="base_map">
-        <value name="DMAX">
-          <block type="math_number">
-            <field name="NUM">180</field>
-          </block>
-        </value>
-      </block>
-    </category>
-    <category name="Tekst">
-      <block type="text"></block>
-    </category>
-    <category name="Variabelen" custom="VARIABLE"></category>
-    <category name="Functies" custom="PROCEDURE"></category>
-    <sep></sep>
-    <category name="Definieer">
-      <block type="declare_var"></block>
-      <block type="declare_var_uint"></block>
-      <block type="declare_var_long"></block>
-      <block type="declare_var_ulong"></block>
-      <block type="declare_var_float"></block>
-    </category>
-    <category name="Input/Output">
-      <block type="inout_highlow"></block>
-      <block type="inout_digital_write"></block>
-      <block type="inout_digital_write_var"></block>
-      <block type="inout_digital_read"></block>
-      <block type="inout_analog_write">
-        <value name="NUM">
-          <block type="math_number">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-      </block>
-      <block type="inout_analog_read"></block>
-      <block type="serial_print">
-        <value name="CONTENT">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-      </block>
-      <block type="inout_tone">
-        <value name="NUM">
-          <block type="math_number">
-            <field name="NUM">440</field>
-          </block>
-        </value>
-      </block>
-      <block type="inout_notone"></block>
-      <block type="inout_buildin_led"></block>
-    </category>
-    <category name="Servo">
-      <block type="servo_move">
-        <value name="DEGREE">
-          <block type="math_number">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-      </block>
-      <block type="servo_read_degrees"></block>
-    </category>
-    <category name="Grove">
-      <block type="grove_led"></block>
-      <block type="grove_button"></block>
-      <block type="grove_relay"></block>
-      <block type="grove_tilt_switch"></block>
-      <block type="grove_piezo_buzzer"></block>
-      <block type="grove_pir_motion_sensor"></block>
-      <block type="grove_line_finder"></block>
-      <block type="grove_rgb_led"></block>
-      <block type="grove_motor_shield"></block>
-      <block type="grove_ultrasonic_ranger"></block>
-      <block type="grove_rotary_angle"></block>
-      <block type="grove_temporature_sensor"></block>
-      <block type="grove_sound_sensor"></block>
-      <block type="grove_thumb_joystick"></block>
-      <block type="grove_serial_lcd_print">
-        <value name="TEXT">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="TEXT2">
-          <block type="text">
-            <field name="TEXT"></field>
-          </block>
-        </value>
-        <value name="DELAY_TIME">
-          <block type="math_number">
-            <field name="NUM">1000</field>
-          </block>
-        </value>
-      </block>
-      <block type="grove_serial_lcd_power"></block>
-      <block type="grove_serial_lcd_effect"></block>
-    </category>
-  </xml>
-  
+  <category id="catLogic" name="Logica">
+    <block type="controls_if"></block>
+    <block type="logic_compare"></block>
+    <block type="logic_operation"></block>
+    <block type="logic_negate"></block>
+    <block type="logic_boolean"></block>
+    <block type="logic_null"></block>
+    <block type="logic_ternary"></block>
+  </category>
+  <sep></sep>
+  <category id="catLoops" name="Herhalen">
+    <block type="controls_repeat_ext">
+      <value name="TIMES">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+    </block>
+    <block type="controls_whileUntil"></block>
+    <block type="controls_for">
+      <value name="FROM">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+      <value name="TO">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+      <value name="BY">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
+    <block type="controls_flow_statements"></block>
+  </category>
+  <sep></sep>
+  <category id="catMath" name="Wiskunde">
+    <block type="math_number"></block>
+    <block type="math_arithmetic"></block>
+    <block type="math_single"></block>
+    <block type="math_trig"></block>
+    <block type="math_constant"></block>
+    <block type="math_number_property"></block>
+    <block type="math_change">
+      <value name="DELTA">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+    </block>
+    <block type="math_round"></block>
+    <block type="math_modulo"></block>
+    <block type="math_constrain">
+      <value name="LOW">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+      <value name="HIGH">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+    </block>
+    <block type="math_random_int">
+      <value name="FROM">
+        <block type="math_number">
+          <field name="NUM">1</field>
+        </block>
+      </value>
+      <value name="TO">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+    </block>
+    <block type="math_random_float"></block>
+    <block type="base_map"></block>
+  </category>
+  <sep></sep>
+  <category id="catText" name="Tekst">
+    <block type="text"></block>
+    <block type="text_join"></block>
+    <block type="text_append">
+      <value name="TEXT">
+        <block type="text"></block>
+      </value>
+    </block>
+    <block type="text_length"></block>
+    <block type="text_isEmpty"></block>
+//    <!--block type="text_trim"></block Need to update block -->
+//    <!--block type="text_print"></block Part of the serial comms -->
+  </category>
+  <sep></sep>
+  <category id="catVariables" name="Variabelen">
+    <block type="variables_get"></block>
+    <block type="variables_set"></block>
+    <block type="variables_set">
+      <value name="VALUE">
+        <block type="variables_set_type"></block>
+      </value>
+    </block>
+    <block type="variables_set_type"></block>
+  </category>
+  <sep></sep>
+  <category id="catFunctions" name="Functions" custom="PROCEDURE"></category>
+  <sep></sep>
+  <category name="Definieer">
+    <block type="declare_var_bool"></block>
+    <block type="declare_var_int"></block>
+    <block type="declare_var_uint"></block>
+    <block type="declare_var_long"></block>
+    <block type="declare_var_ulong"></block>
+    <block type="declare_var_float"></block>
+    <block type="declare_var_digin"></block>
+    <block type="declare_var_digout"></block>
+    <block type="declare_var_anain"></block>
+    <block type="declare_var_anaout"></block>
+  </category>
+  <sep></sep>
+  <category id="catInputOutput" name="Input/Output">
+    <block type="io_pin_dig"></block>
+    <block type="io_pin_an"></block>
+    <block type="io_pin_pwm"></block>
+    <block type="io_digitalwrite">
+      <value name="STATE">
+        <block type="io_highlow"></block>
+      </value>
+    </block>
+    <block type="io_digitalwrite_var">
+      <value name="STATE">
+        <block type="io_highlow"></block>
+      </value>
+    </block>
+    <block type="io_digitalread"></block>
+    <block type="io_digitalread_var"></block>
+    <block type="io_builtin_led">
+      <value name="STATE">
+        <block type="io_highlow"></block>
+      </value>
+    </block>
+    <block type="io_analogwrite"></block>
+    <block type="io_analogread"></block>
+    <block type="io_highlow"></block>
+  </category>
+  <sep></sep>
+  <category id="catTime" name="Tijd">
+    <block type="time_delay">
+      <value name="DELAY_TIME_MILI">
+        <block type="math_number">
+          <field name="NUM">1000</field>
+        </block>
+      </value>
+    </block>
+    <block type="time_delaymicros">
+      <value name="DELAY_TIME_MICRO">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+    </block>
+    <block type="time_millis"></block>
+    <block type="time_micros"></block>
+    <block type="infinite_loop"></block>
+  </category>
+  <sep></sep>
+  <category id="catMotors" name="Motoren">
+    <block type="servo_write">
+      <value name="SERVO_ANGLE">
+        <block type="math_number">
+          <field name="NUM">90</field>
+        </block>
+      </value>
+    </block>
+    <block type="servo_read"></block>
+    <block type="stepper_config">
+      <field name="STEPPER_PIN1">1</field>
+      <field name="STEPPER_PIN2">2</field>
+      <value name="STEPPER_STEPS">
+        <block type="math_number">
+          <field name="NUM">100</field>
+        </block>
+      </value>
+      <value name="STEPPER_SPEED">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+    </block>
+    <block type="stepper_step">
+      <value name="STEPPER_STEPS">
+        <block type="math_number">
+          <field name="NUM">10</field>
+        </block>
+      </value>
+    </block>
+  </category>
+  <sep></sep>
+  <category id="catComms" name="Comms">
+    <block type="serial_setup"></block>
+    <block type="serial_print"></block>
+    <block type="text_prompt_ext">
+      <value name="TEXT">
+        <block type="text"></block>
+      </value>
+    </block>
+    <block type="spi_setup"></block>
+    <block type="spi_transfer"></block>
+    <block type="spi_transfer_return"></block>
+  </category>
+</xml>;
 
 </body>
 </html>
