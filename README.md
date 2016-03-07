@@ -19,11 +19,13 @@ Example use: [Generate PHP from blocks](https://blockly-demo.appspot.com/static/
 ## Blockly for Arduino and Genuino
 Generate Arduino code usable in the Arduino IDE or [Codebender](http://Codebender.cc)
 
-This code is based on integrating back the work of [BlocklyDuino](https://github.com/BlocklyDuino/BlocklyDuino) into Blockly so as to track Blockly. There are some changes (which might be integrated back into BlocklyDuino if accepted in due time):
+This code is based on the work of [Ardublockly](https://github.com/carlosperate/ardublockly) and  [BlocklyDuino](https://github.com/BlocklyDuino/BlocklyDuino) into Blockly so as to track Blockly. There are some changes (which might be integrated back into Ardublockly if accepted in due time):
 + Fully translatable versions of Arduino Blocks
 + Declaration of variables (int, uint, long, float)
 + Extra functions
 + Write to pins with variables
+
+Example site: [Blockly4Arduino](http://ingegno.be/Manuals/Blockly4Arduino/blockly4Arduino/index_en.html)
 
 Example Screenshots:
 
